@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link href='https://fonts.googleapis.com/css?family=Hind|Alegreya+Sans:300|Yeseva+One' rel='stylesheet' type='text/css'>
+<link href='/css/request.css' rel='stylesheet' type='text/css'>
+<link href='/css/style.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<div class="home"><a href="http://phyllisandjohn.com/">HOME</a></div>
+			<div class="details"><a href="http://phyllisandjohn.com/details">DETAILS</a></div>
+			<div class="crew"><a href="http://phyllisandjohn.com/crew">CREW</a></div>
+			<div class="photos"><a href="http://phyllisandjohn.com/photos">PHOTOS</a></div>
+			{% for post in site.posts %}
+	    		<div class="post"><a href="{{ post.url }}">POST A MEMORY</a></div>
+	  		{% endfor %}
+			<div class="request"><a href="http://phyllisandjohn.com/request">REQUEST A SONG</a></div>
+		</div>
+	</div>
+
+{{content}}
+
+</body>
+</html>

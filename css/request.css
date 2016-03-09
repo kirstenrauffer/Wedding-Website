@@ -1,0 +1,75 @@
+.recieved {
+  width: 85%;
+  height: 40px;
+  float: left;
+  margin-left: 5%;
+  margin-top: 100px;
+  background: rgba(122,201,191,.7);
+  border: 1px solid rgba(122,201,191,.7);
+  color: #fff;
+  padding-right: 20px;
+}
+
+.recieved p {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.search input[type="text"] {
+  width: 85%;
+  height: 40px;
+  float: left;
+  margin-left: 5%;
+  padding-left: 20px;
+  margin-right: -20px;
+  border: 1px solid rgb(249,214,193);
+  background: #fff;
+  color: rgb(249,214,193);
+  text-transform: uppercase;
+}
+
+input[type="submit"] {
+  position: absolute;
+  left: 50%;
+  margin-left: 100px;
+  height: 45px;
+  width: 100px;
+  margin-top: 25px;
+  background: rgb(249,214,193);
+  border: none;
+  color: white;
+}
+
+.search ul {
+  width: 85%;
+  float: left;
+  margin-top: 0px;
+  margin-left: 5%;
+  padding-left: 30px;
+  margin-right: -20px;
+  text-align: left;
+}
+
+.move-left {
+  margin-left: -30px;
+}
+
+.search ul li {
+  list-style-type: none;
+  border-bottom: 1px solid rgb(249,214,193);
+  cursor: pointer;
+  clear: both;
+  background: rgba(122,201,191,.7);
+  color: white;
+  padding: 20px 15px 20px 15px;
+}
+
+.search ul li:hover {
+  background: rgba(122,201,191,.3);
+}
+
+.search ul li div {
+  float: right 
+}
+
+

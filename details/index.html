@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Details</title>
+<link href='https://fonts.googleapis.com/css?family=Hind|Alegreya+Sans:300|Yeseva+One' rel='stylesheet' type='text/css'>
+<link href='/css/normalize.css' rel='stylesheet' type='text/css'>
+<style>
+body {
+  background: #F5F5F5;
+  font-family: "Avenir";
+  color: #4A4A4A;
+}
+
+.left-panel {
+  margin: -20px 0px 0px -10px;
+  position: absolute;
+  width: 335px;
+  height: 120vh;
+  background: white;
+  text-align: center;
+  z-index: 10;
+}
+
+.navigation {
+  margin-top: 150px;
+}
+
+.navigation h1 {
+  font-family: "American Typewriter";
+  font-size: 32px;
+  font-weight: normal;
+  margin: -10px;
+}
+
+.navigation p {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.navigation ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 50px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #4A4A4A;
+}
+
+.navigation li {
+  width: 335px;
+  padding: 15px 0px 15px 0px;
+}
+
+.active {
+  background: #F5F5F5;
+}
+
+.divider {
+  margin: 0 auto;
+  width: 145px;
+  height: 4px;
+  background: #9B9B9B;
+}
+
+.main {
+  margin-left: 335px;
+}
+
+.instructions {
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,.25);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 100px;
+	width: 355px;
+	background: white;
+	margin-left: 180px;
+	margin-top: 135px;
+	font-size: 10px;
+	padding: 10px;
+}
+	
+.arrow-down {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	-ms-filter: "FlipH";
+	filter: FlipH;
+	margin-top:-5px;
+	margin-left: 265px;
+	transform: rotate(-30deg);
+}
+
+.calendar {
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,.25);
+	position: absolute;
+	left: 50%;
+	margin-left: 180px;
+	top: 50%;
+	margin-top: -192.5px;
+	width: 375px;
+	height: 300px;
+	background: #fff;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 5;
+	padding-bottom: 15px;
+}
+.calendar .calendar-header{
+	border-bottom: 1px solid rgb(235,246,245);
+	font-size: 20px;
+	padding: 10px;
+}
+img {
+	position: fixed;
+}
+table {
+	text-align: center;
+	width: 100%;
+}
+td {
+	margin-top: 5px;
+	padding: 10px;
+}
+.subscribe {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 15px;
+	margin-top: -250px;
+	width: 375px;
+	height: 40px;
+	text-transform: uppercase;	
+	z-index: 6;
+}
+
+.subscribe input[type="email"] {
+	width: 258px;
+	height: 40px;
+	float: left;
+	border: 1px solid rgb(249,214,193);
+	background: #fff;
+	color: rgb(249,214,193);
+	text-transform: uppercase;
+	padding-left: 10px;
+}
+
+.subscribe input[type="submit"] {
+	float: left;
+	height: 44px;
+	width: 90px;
+	background: rgb(249,214,193);
+	border: none;
+	color: white;
+}
+
+.highlighted {
+	border-radius: 50%;
+	background: rgba(249,214,193,.5);
+	width: 18px;
+	height: 18px;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.crab-right, .crab-left, .heart-wrapper {
+	margin-top: 10px;
+}
+.blurb {
+	text-transform: uppercase;
+	padding-top: 15px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 363px;
+	margin-top: -285px;
+	text-align: center;
+	background: #FCEBE0;
+	width: 250px;
+	height: 155px;
+	border-radius: 7px;
+	font-size: 12px;
+	display: none;
+	z-index: 7;
+}
+.arrow {
+	position: absolute;
+	left: 50%;
+	margin-left: -15px;
+	bottom: -10px;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #FCEBE0;
+}
+
+::-webkit-input-placeholder {
+	text-transform: uppercase;
+	color: rgb(249,214,193)
+}
+:-moz-placeholder {
+	text-transform: uppercase;
+	color: rgb(249,214,193)
+}
+::-moz-placeholder {
+	text-transform: uppercase;
+	color: rgb(249,214,193)
+}
+:-ms-input-placeholder {
+	text-transform: uppercase;
+	color: rgb(249,214,193)
+}
+
+/*Invitation*/
+.css-invitation {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -250px;
+	margin-top: 122.5px;
+	-webkit-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	transform: rotate(-5deg);
+}
+
+.message {
+	text-align: right;
+	padding: 10px;
+	margin-right: 15px;
+	margin-top: 60px;
+	line-height: 22px;
+}
+
+.message p {
+	font-size: 13px;
+}
+
+.message h2 {
+	font-family: "American Typewriter";
+	font-weight: normal;
+	font-size: 36px;
+	margin: 20px 0px 20px 0px;
+}
+
+.front {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-left: 215px solid transparent;
+	border-right: 215px solid transparent;
+	border-bottom: 185px solid #EBF6EF;
+	border-radius: 10px;
+	margin-top: -10px;
+}
+
+.side-left {
+	position: absolute;
+	margin-top: -150px;
+	margin-left: 215px;
+	width: 0; 
+	height: 0; 
+	border-top: 150px solid transparent;
+	border-bottom: 175px solid transparent; 
+	border-right:215px solid #DCEEDD; 
+	border-radius: 10px;
+}
+
+.side-right {
+	position: absolute;
+	margin-top: -150px;
+	width: 0; 
+	height: 0; 
+	border-top: 150px solid transparent;
+	border-bottom: 175px solid transparent; 
+	border-left:215px solid #DCEEDD; 
+	border-radius: 10px;
+}
+
+.back {	
+	position: absolute;
+	width: 430px;
+	height: 200px;
+	background: #BBE0C6;
+	margin-top: -150px;
+	border-radius: 10px;
+}
+
+.back-top {	
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	margin-top: -330px;
+	border-left: 215px solid transparent;
+	border-right: 215px solid transparent;
+	border-bottom: 185px solid #BBE0C6;
+	border-radius: 10px;
+}
+
+.inner-invitation {	
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,.25);
+	position: absolute;
+	margin-left: 45px;
+	width: 370px;
+	height: 447.5px;
+	background: #fff;
+	margin-top: -295px;
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	transform: rotate(5deg);
+}
+
+.focus:focus {
+	outline: none;
+}
+
+
+/*Crab*/
+.crabs {
+  position: absolute; 
+  top: 60px;
+  left: 70px;
+}
+
+.crab-right {
+  position: absolute;
+  left: 200px;
+  top: -10px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.body {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height:25px;
+	width:45px;
+	border-radius: 50%;
+	background: rgb(255,145,106);
+}
+
+.eye-line-right {
+	position: absolute;
+	left: 27px;
+	top: 6px;
+	width: 3px;
+	height: 10px;
+	background: rgb(255,145,106);
+	-webkit-transform: rotate(15deg);
+	-moz-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	transform: rotate(15deg);
+}
+
+.eye-line-left {
+	position: absolute;
+	left: 13px;
+	top: 6px;
+	width: 3px;
+	height: 10px;
+	background: rgb(255,145,106);
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.eye-left {
+	position: absolute;
+	left: 7px;
+	top: -2px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgb(255,145,106);
+}
+
+.eye-right {
+	position: absolute;
+	left: 25px;
+	top: -2px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgb(255,145,106);
+}
+
+.eye-white{
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FFF;
+}
+
+.eye-ball{
+	position: absolute;
+	top: 1px;
+	left: 3px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #3C2415;
+}
+
+.eye {
+	position: absolute;
+	left: 2px;
+}
+
+.leg-1 {
+	position: absolute;
+	top: 35px;
+	left: 3px;
+	height: 6px;
+	width: 10px;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-right: 0px;
+	border-radius: 10px 10px 0 0;	
+}
+
+.leg-2 {
+	position: absolute;
+	top: 35px;
+	left: 10px;
+	height: 6px;
+	width: 10px;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-right: 0px;
+	border-radius: 10px 10px 0 0;	
+}
+
+.leg-3 {
+	position: absolute;
+	top: 35px;
+	left: 23px;
+	height: 6px;
+	width: 10px;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-left: 0px;
+	border-radius: 10px 10px 0 0;	
+}
+
+.leg-4 {
+	position: absolute;
+	top: 35px;
+	left: 29px;
+	height: 6px;
+	width: 10px;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-left: 0px;
+	border-radius: 10px 10px 0 0;	
+}
+
+.arm-left {
+	position: absolute;
+	top: 24px;
+	left: -18px;
+	height: 15px;
+	width: 25px;
+	margin: auto;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-right: 0px;
+	border-radius: 25px 25px 0 0;
+	clip: rect(auto auto 6px auto);	
+}
+
+.arm-right {
+	position: absolute;
+	top: 6px;
+	left: 30px;
+	height: 15px;
+	width: 25px;
+	margin: auto;
+	border: 3px solid rgb(255,145,106);
+	border-left: 0px;
+	border-radius:0 0 25px 25px;
+	clip: rect(8px auto auto auto);	
+}
+
+.claw-left {
+	position: absolute;
+	left: -27px;
+	top: 23px;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.claw-right {
+	position: absolute;
+	right: -50px;
+	top: 7px;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+.claw-top {
+	top: 1px;
+	position: absolute;
+	height: 10px;
+	width: 15px;
+	border-radius: 90px 90px 0 0;
+	-moz-border-radius: 90px 90px 0 0;
+	-webkit-border-radius: 90px 90px 0 0;
+	background: rgb(255,145,106);
+	clip: rect(auto auto 7px auto);
+}
+
+.crab-right .claw-right .claw-top {
+	animation: clawing-top 4s 2.5s infinite;
+}
+
+.crab-right .claw-right .claw-bottom {
+	animation: clawing-bottom 4s 2.5s infinite;
+}
+
+.crab-left .claw-right .claw-top {
+	animation: clawing-top 4s 1s infinite;
+}
+
+.crab-left .claw-right .claw-bottom {
+	animation: clawing-bottom 4s 1s infinite;
+}
+
+.claw-bottom {
+	position: absolute;
+	top: 5px;
+	height: 10px;
+	width: 15px;
+	border-radius: 0 0 90px 90px;
+	-moz-border-radius: 0 0 90px 90px;
+	-webkit-border-radius: 0 0 90px 90px;
+	background: rgb(255,145,106);
+	clip: rect(3px auto auto auto);
+}
+
+.claw-left .claw-top {
+	-webkit-transform: rotate(15deg);
+	-moz-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	transform: rotate(15deg);
+}
+
+.claw-left .claw-bottom {
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.smile {
+	position: absolute;
+	left: 10px;
+	top: -3px;
+	margin: auto;
+	border: 3px solid rgb(158,57,21);
+	width: 20px;
+	height: 20px;
+	border-top: none;
+	border-radius: 0 0 50% 50%;
+	clip: rect(15px auto auto auto);
+}
+
+.crab-left .blinking {
+	clip: rect(0px, 42px, 42px, 0px);
+	animation: blinking 8s 1s infinite;
+}
+
+.crab-right .blinking {
+	clip: rect(0px, 42px, 42px, 0px);
+	animation: blinking 8s 2s infinite;
+}
+
+@-moz-keyframes blinking {
+  0% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  2% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  5% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  40% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  42% {
+    clip: rect(18px, 42px, 23px, 0px);
+  }
+  45% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  47% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  49% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  100% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+}
+@-webkit-keyframes blinking {
+  0% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  2% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  5% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  40% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  42% {
+    clip: rect(18px, 42px, 23px, 0px);
+  }
+  45% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  47% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  49% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  100% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+}
+@-o-keyframes blinking {
+  0% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  2% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  5% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  40% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  42% {
+    clip: rect(18px, 42px, 23px, 0px);
+  }
+  45% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  47% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  49% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  100% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+}
+@keyframes blinking {
+  0% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  2% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  5% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  40% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  42% {
+    clip: rect(18px, 42px, 23px, 0px);
+  }
+  45% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  47% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  49% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  100% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+}
+
+@keyframes clawing-top {
+  0% {
+	transform: rotate(0deg);
+  }
+  2% {
+	transform: rotate(-30deg);
+  }
+  5% {
+	transform: rotate(-30deg);
+  }
+  15% {
+	transform: rotate(0deg);
+  }
+  22% {
+	transform: rotate(-30deg);	
+  }
+  25% {
+	transform: rotate(-30deg);	
+  }
+  47% {
+	transform: rotate(0deg);	
+  }
+  100% {
+	transform: rotate(0deg);
+  }
+}
+
+@keyframes clawing-bottom {
+  0% {
+	transform: rotate(0deg);
+  }
+  2% {
+	transform: rotate(30deg);
+  }
+  5% {
+	transform: rotate(30deg);
+  }
+  15% {
+	transform: rotate(0deg);
+  }
+  22% {
+	transform: rotate(30deg);	
+  }
+  25% {
+	transform: rotate(30deg);	
+  }
+  47% {
+	transform: rotate(0deg);	
+  }
+  100% {
+	transform: rotate(0deg);
+  }
+}
+
+/*Heart*/
+.heart-wrapper {
+	position: absolute;
+	left: 162.5px;
+	top: 65px;
+	height: 20px;
+	width: 20px;
+}
+
+.heart-wrapper .heart {
+	display: block;
+	height: 15px;
+	width: 15px;
+	top: 54%;
+	margin-top: -5em;
+	margin-left: -5em;
+	left: 50%;
+	position: absolute;
+	z-index: 0;
+}
+
+.heart-wrapper .heart > * {
+	overflow: hidden;
+	position: absolute;
+}
+
+.heart-wrapper .heart > *:after {
+	display: block;
+	content: '';
+	position: absolute;
+	background: #F27173;
+}
+
+.heart-wrapper .heart .tl {
+	height: 25%;
+	width: 50.25%;
+	top: 0;
+	left: 0;
+}
+
+.heart-wrapper .heart .tl:after {
+	top: 0;
+	left: 0;
+	height: 200%;
+	width: 104%;
+	border-top-left-radius: 70% 80%;
+	border-top-right-radius: 80% 80%;
+ 	border-bottom-right-radius: 50% 50%;
+	border-bottom-left-radius: 50% 50%;
+}
+
+.heart-wrapper .heart .tr {
+	height: 25%;
+	width: 50.25%;
+	top: 0;
+	right: 0;
+}
+
+.heart-wrapper .heart .tr:after {
+	top: 0;
+	right: 0;
+	height: 200%;
+	width: 104%;
+	border-top-left-radius: 80% 80%;
+	border-top-right-radius: 70% 80%;
+	border-bottom-right-radius: 50% 50%;
+	border-bottom-left-radius: 50% 50%;
+}
+
+.heart-wrapper .heart .bl {
+	height: 75.5%;
+	width: 50.25%;
+	bottom: 0;
+	left: 0;
+}
+
+.heart-wrapper .heart .bl:after {
+	top: 0;
+	left: 0;
+	height: 95%;
+	width: 160%;
+	border-top-left-radius: 0 0;
+	border-top-right-radius: 0 0;
+	border-bottom-right-radius: 0 0;
+	border-bottom-left-radius: 100% 100%;
+}
+
+.heart-wrapper .heart .br {
+ 	height: 75.5%;
+	width: 50.25%;
+ 	bottom: 0;
+	right: 0;
+}
+
+.heart-wrapper .heart .br:after {
+	top: 0;
+	right: 0;
+	height: 95%;
+	width: 160%;
+	border-top-left-radius: 0 0;
+	border-top-right-radius: 0 0;
+	border-bottom-right-radius: 100% 100%;
+	border-bottom-left-radius: 0 0;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="left-panel">
+	<div class="navigation">
+		<div class="crabs">
+			<div class="crab-left">
+				<div class="body">
+					<div class="smile"></div>
+				</div>
+				<div class="eye">
+					<div class="eye-line-left"></div>
+					<div class="eye-line-right"></div>
+					<div class="eye-left">
+					<div class="eye-white blinking">
+						<div class="eye-ball"></div>
+					</div>	
+				</div>	
+				<div class="eye-right">
+					<div class="eye-white blinking">
+						<div class="eye-ball"></div>
+					</div>	
+				</div>
+			</div>
+			<div class="arm-left"></div>
+			<div class="arm-right"></div>
+				<div class="claw-left">
+					<div class="claw-top"></div>
+					<div class="claw-bottom"></div>
+				</div>
+				<div class="claw-right">
+					<div class="claw-top clawing"></div>
+					<div class="claw-bottom"></div>
+				</div>
+				<div class="leg-1"></div>
+				<div class="leg-2"></div>
+				<div class="leg-3"></div>
+				<div class="leg-4"></div>
+			</div>
+			<div class="heart-wrapper">
+				<div class="heart">
+					<div class="tl"></div>
+					<div class="tr"></div>
+					<div class="bl"></div>
+					<div class="br"></div>
+				</div>
+			</div>
+			<div class="crab-right">
+				<div class="body">
+					<div class="smile"></div>
+				</div>
+				<div class="eye">
+					<div class="eye-line-left"></div>
+					<div class="eye-line-right"></div>
+					<div class="eye-left">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>
+					<div class="eye-right">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>
+				</div>
+				<div class="arm-left"></div>
+				<div class="arm-right"></div>
+				<div class="claw-left">
+					<div class="claw-top"></div>
+					<div class="claw-bottom"></div>
+				</div>
+				<div class="claw-right">
+					<div class="claw-top"></div>
+					<div class="claw-bottom"></div>
+				</div>
+				<div class="leg-1"></div>
+				<div class="leg-2"></div>
+				<div class="leg-3"></div>
+				<div class="leg-4"></div>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<p>05-06-2016</p>
+		<h1>Phyllis & John</h1>
+		<p>sea bright, nj</p>
+		<div class="divider"></div>
+
+		<ul>
+			<li><a href="/">rsvp</a></li>
+			<li class="active"><a href="/details/">details</a></li>
+			<li><a href="/crew/">crew</a></li>
+			<li><a href="/photos/">photographs</a></li>
+			<li><a href="/request/">request a song</a></li>
+		</ul>
+	</div>	
+</div>
+<div class="main">
+	<div class="calendar">
+		<table> 
+			<tr>
+				<td colspan="7" class="calendar-header">2016/May</td> 
+			</tr> 
+			<tr> 
+				<td>sun</td>
+				<td>mon</td>
+				<td>tue</td>
+				<td>wed</td>
+				<td>thu</td>
+				<td>fri</td>
+				<td>sat</td>
+			</tr> 
+			<tr> 
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td class="highlighted"><span>6</span></td>
+				<td>7</td>
+			</tr> 
+			<tr> 
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+			</tr> 
+			<tr> 
+				<td>15</td>
+				<td>16</td>
+				<td>17</td>
+				<td>18</td>
+				<td>19</td>
+				<td>20</td>
+				<td>21</td>
+			</tr> 
+			<tr> 
+				<td>22</td>
+				<td>23</td>
+				<td>24</td>
+				<td>25</td>
+				<td>26</td>
+				<td>27</td>
+				<td>28</td>
+			</tr> 
+			<tr> 
+				<td>29</td>
+				<td>30</td>
+				<td>31</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr> 
+		</table>
+	</div>
+	
+	<div class="subscribe">
+  	<form method="POST" action="http://formspree.io/phyllisandjohn.guestlist@gmail.com">
+  		<input name="email" class="focus" placeholder="GET EMAIL UPDATES/REMINDERS" type="email">
+  		<input type="hidden" name="_next" value="http://phyllisandjohn.com/details/"/>
+  		<input name="name" type="hidden" value="guest">
+  		<input type="submit" value="REQUEST">
+	</form>
+	</div>
+	
+	<div class="blurb">
+		May 16, 2016<br>
+		4:30PM<br><br>
+
+		<a href="http://www.njwindowsonthewater.com/">Windows on the Water</a><br>
+		931 Ocean Avenue<br>
+		Seabright, NJ<br><br>
+
+		<a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=dWpkMW02amlzZzM0NTBtbW5zbDliaGx1MjAga2lyc3RlbnJhdWZmZXJAbQ&amp;tmsrc=kirstenrauffer%40gmail.com">Add to Google Calendar</a></br>
+		<a href="https://www.google.com/maps/place/Windows+On+the+Water+at+Surfrider+Beach+Club/@40.368899,-73.975891,17z/data=!3m1!4b1!4m2!3m1!1s0x89c23bb0490169a1:0x8d752cbadb28d141">View on Google Maps</a>
+		<div class="arrow"></div>
+	</div>
+		<div class="css-invitation">
+			<div class="back"></div>
+			<div class="back-top"></div>
+			<div class="side-left"></div>
+			<div class="side-right"></div>
+			<div class="front"></div>
+			<div class="inner-invitation">
+				<div class="message">
+					<p>EAT, DRINK, AND BE MARRIED</p>
+					<h2>Phyllis & John</h2>
+					<p>REQUEST THE HONOR OF YOUR PRESENCE <br>
+					   AS THEY CELEBRATE THEIR LIFE TOGETHER <br>
+					   FRIDAY, THE SIXTH OF MAY <br>
+					   TWO THOUSAND AND SIXTEEN <br>
+					   AT FOUR THIRY IN THE EVENING <br>
+					</p>
+		
+					<p>WINDOWS ON THE WATER <br>
+					   NINE THIRTY-ONE OCEAN AVENUE <br>
+					   SEABRIGHT, NJ <br>
+					</p>
+				</div>
+			</div>
+		</div>
+	<div class="instructions">
+		<p>For hotel bookings, click <a href="http://doubletree.hilton.com/en/dt/groups/personalized/J/JFKETDT-LMW-20160505/index.jhtml?WT.mc_id=POG">here</a> to reserve a room at the DoubleTree by Hilton Hotel!<br><br>
+		We reserved a block of rooms so that you can book at a reduced rate. There will be a shuttle service from the hotel to Windows On the Water. The rooms will be released 30 days before the wedding. 
+		</p>
+		<div class="arrow-down"></div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>		
+<script>
+var main = function() {
+	$( ".highlighted" )
+  		.mouseenter(function() {
+		$(".blurb").fadeIn(500);
+  	});
+  	
+  	$( ".highlighted" ).onClick(function() {
+		$(".blurb").fadeIn(500);
+  	});
+}
+$(document).ready(main);
+</script>
+
+</body>
+</html>

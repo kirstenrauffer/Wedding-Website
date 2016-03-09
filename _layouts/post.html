@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link href='https://fonts.googleapis.com/css?family=Hind|Alegreya+Sans:300|Yeseva+One' rel='stylesheet' type='text/css'>
+<link href='/css/style.css' rel='stylesheet' type='text/css'>
+<link href='/css/post.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<div class="home"><a href="http://phyllisandjohn.com/">HOME</a></div>
+			<div class="details"><a href="http://phyllisandjohn.com/details">DETAILS</a></div>
+			<div class="crew"><a href="http://phyllisandjohn.com/crew">CREW</a></div>
+			<div class="photos"><a href="http://phyllisandjohn.com/photos">PHOTOS</a></div>
+			{% for post in site.posts %}
+	    		<div class="post"><a href="{{ post.url }}">POST A MEMORY</a></div>
+	  		{% endfor %}
+			<div class="request"><a href="http://phyllisandjohn.com/request">REQUEST A SONG</a></div>
+		</div>
+	</div>
+
+<div class="hide-top">
+	<div class="container">
+				<div class="crab-left">
+					<div class="body">
+						<div class="smile"></div>
+					</div>
+					<div class="eye">
+					<div class="eye-line-left"></div>
+					<div class="eye-line-right"></div>
+					<div class="eye-left">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>	
+					<div class="eye-right">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>
+					</div>
+					<div class="arm-left"></div>
+					<div class="arm-right"></div>
+					<div class="claw-left">
+						<div class="claw-top"></div>
+						<div class="claw-bottom"></div>
+					</div>
+					<div class="claw-right">
+						<div class="claw-top clawing"></div>
+						<div class="claw-bottom"></div>
+					</div>
+					<div class="leg-1"></div>
+					<div class="leg-2"></div>
+					<div class="leg-3"></div>
+					<div class="leg-4"></div>
+				</div>
+				<div class="instructions">
+<p>Post some of your favorite memories with Phyllis and John! We will probably share these at the reception, so give us some good stuff.<br><br>
+
+P.S. You don't have to sign up to post something! Write your memory, choose "OR SIGN UP WITH DISQUS" and then check "I'd rather post as a guest."
+</p>
+				<div class="arrow-down"></div>
+				</div>
+			</div>
+		</div>
+<div id="disqus_thread"></div>
+
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//phyllisandjohn.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+</body>
+</html>
+

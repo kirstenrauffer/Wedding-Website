@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photos</title>
+<link href='https://fonts.googleapis.com/css?family=Hind|Alegreya+Sans:300|Yeseva+One' rel='stylesheet' type='text/css'>
+<link href='/css/normalize.css' rel='stylesheet' type='text/css'>
+<style>
+body {
+  background: #F5F5F5;
+  font-family: "Avenir";
+  color: #4A4A4A;
+}
+
+.left-panel {
+  margin: -20px 0px 0px -10px;
+  position: absolute;
+  width: 335px;
+  height: 120vh;
+  background: white;
+  text-align: center;
+}
+
+.navigation {
+  margin-top: 150px;
+}
+
+.navigation h1 {
+  font-family: "American Typewriter";
+  font-size: 32px;
+  font-weight: normal;
+  margin: -10px;
+}
+
+.navigation p {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.navigation ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 50px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #4A4A4A;
+}
+
+.navigation li {
+  width: 335px;
+  padding: 15px 0px 15px 0px;
+}
+
+.active {
+  background: #F5F5F5;
+}
+
+.divider {
+  margin: 0 auto;
+  width: 145px;
+  height: 4px;
+  background: #9B9B9B;
+}
+
+.main {
+  margin-left: 335px;
+}
+
+/*RSVP*/
+.rsvp {
+	position: fixed;
+	left: 50%;
+	margin-left: -85px;
+	top: 50%;
+	margin-top: -150px;
+	width: 460px;
+	height: 315px;
+	background: #fff;
+	font-size: 12px;
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,.25);
+	padding: 15px 0px 0px 40px;
+}
+
+.rsvp h1{
+	font-family: 'American Typewriter';
+	font-weight: normal;
+	font-size: 26px;
+	margin: 15px 20px 0px 0px;
+}
+
+.rsvp p{
+	margin: 5px 65px 0px 25px;
+	text-align: center;
+}
+	
+
+/*Crab*/
+.crabs {
+  position: absolute; 
+  top: 60px;
+  left: 70px;
+}
+
+.crab-right {
+  position: absolute;
+  left: 200px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.body {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height:25px;
+	width:45px;
+	border-radius: 50%;
+	background: rgb(255,145,106);
+}
+
+.eye-line-right {
+	position: absolute;
+	left: 27px;
+	top: 6px;
+	width: 3px;
+	height: 10px;
+	background: rgb(255,145,106);
+	-webkit-transform: rotate(15deg);
+	-moz-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	transform: rotate(15deg);
+}
+
+.eye-line-left {
+	position: absolute;
+	left: 13px;
+	top: 6px;
+	width: 3px;
+	height: 10px;
+	background: rgb(255,145,106);
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.eye-left {
+	position: absolute;
+	left: 7px;
+	top: -2px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgb(255,145,106);
+}
+
+.eye-right {
+	position: absolute;
+	left: 25px;
+	top: -2px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgb(255,145,106);
+}
+
+.eye-white{
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #FFF;
+}
+
+.eye-ball{
+	position: absolute;
+	top: 1px;
+	left: 3px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #3C2415;
+}
+
+.eye {
+	position: absolute;
+	left: 2px;
+}
+
+.leg-1 {
+	position: absolute;
+	top: 35px;
+	left: 3px;
+	height: 6px;
+	width: 10px;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-right: 0px;
+	border-radius: 10px 10px 0 0;	
+}
+
+.leg-2 {
+	position: absolute;
+	top: 35px;
+	left: 10px;
+	height: 6px;
+	width: 10px;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-right: 0px;
+	border-radius: 10px 10px 0 0;	
+}
+
+.leg-3 {
+	position: absolute;
+	top: 35px;
+	left: 23px;
+	height: 6px;
+	width: 10px;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-left: 0px;
+	border-radius: 10px 10px 0 0;	
+}
+
+.leg-4 {
+	position: absolute;
+	top: 35px;
+	left: 29px;
+	height: 6px;
+	width: 10px;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-left: 0px;
+	border-radius: 10px 10px 0 0;	
+}
+
+.arm-left {
+	position: absolute;
+	top: 24px;
+	left: -18px;
+	height: 15px;
+	width: 25px;
+	margin: auto;
+	border: 3px solid rgb(255,145,106);
+	border-bottom: 0px;
+	border-right: 0px;
+	border-radius: 25px 25px 0 0;
+	clip: rect(auto auto 6px auto);	
+}
+
+.arm-right {
+	position: absolute;
+	top: 6px;
+	left: 30px;
+	height: 15px;
+	width: 25px;
+	margin: auto;
+	border: 3px solid rgb(255,145,106);
+	border-left: 0px;
+	border-radius:0 0 25px 25px;
+	clip: rect(8px auto auto auto);	
+}
+
+.claw-left {
+	position: absolute;
+	left: -27px;
+	top: 23px;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.claw-right {
+	position: absolute;
+	right: -50px;
+	top: 7px;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+.claw-top {
+	top: 1px;
+	position: absolute;
+	height: 10px;
+	width: 15px;
+	border-radius: 90px 90px 0 0;
+	-moz-border-radius: 90px 90px 0 0;
+	-webkit-border-radius: 90px 90px 0 0;
+	background: rgb(255,145,106);
+	clip: rect(auto auto 7px auto);
+}
+
+.crab-right .claw-right .claw-top {
+	animation: clawing-top 4s 2.5s infinite;
+}
+
+.crab-right .claw-right .claw-bottom {
+	animation: clawing-bottom 4s 2.5s infinite;
+}
+
+.crab-left .claw-right .claw-top {
+	animation: clawing-top 4s 1s infinite;
+}
+
+.crab-left .claw-right .claw-bottom {
+	animation: clawing-bottom 4s 1s infinite;
+}
+
+.claw-bottom {
+	position: absolute;
+	top: 5px;
+	height: 10px;
+	width: 15px;
+	border-radius: 0 0 90px 90px;
+	-moz-border-radius: 0 0 90px 90px;
+	-webkit-border-radius: 0 0 90px 90px;
+	background: rgb(255,145,106);
+	clip: rect(3px auto auto auto);
+}
+
+.claw-left .claw-top {
+	-webkit-transform: rotate(15deg);
+	-moz-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	transform: rotate(15deg);
+}
+
+.claw-left .claw-bottom {
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.smile {
+	position: absolute;
+	left: 10px;
+	top: -3px;
+	margin: auto;
+	border: 3px solid rgb(158,57,21);
+	width: 20px;
+	height: 20px;
+	border-top: none;
+	border-radius: 0 0 50% 50%;
+	clip: rect(15px auto auto auto);
+}
+
+.crab-left .blinking {
+	clip: rect(0px, 42px, 42px, 0px);
+	animation: blinking 8s 1s infinite;
+}
+
+.crab-right .blinking {
+	clip: rect(0px, 42px, 42px, 0px);
+	animation: blinking 8s 2s infinite;
+}
+
+@-moz-keyframes blinking {
+  0% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  2% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  5% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  40% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  42% {
+    clip: rect(18px, 42px, 23px, 0px);
+  }
+  45% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  47% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  49% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  100% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+}
+@-webkit-keyframes blinking {
+  0% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  2% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  5% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  40% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  42% {
+    clip: rect(18px, 42px, 23px, 0px);
+  }
+  45% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  47% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  49% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  100% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+}
+@-o-keyframes blinking {
+  0% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  2% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  5% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  40% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  42% {
+    clip: rect(18px, 42px, 23px, 0px);
+  }
+  45% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  47% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  49% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  100% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+}
+@keyframes blinking {
+  0% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  2% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  5% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  40% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  42% {
+    clip: rect(18px, 42px, 23px, 0px);
+  }
+  45% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  47% {
+    clip: rect(21px, 42px, 21px, 0px);
+  }
+  49% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+  100% {
+    clip: rect(0px, 42px, 42px, 0px);
+  }
+}
+
+@keyframes clawing-top {
+  0% {
+	transform: rotate(0deg);
+  }
+  2% {
+	transform: rotate(-30deg);
+  }
+  5% {
+	transform: rotate(-30deg);
+  }
+  15% {
+	transform: rotate(0deg);
+  }
+  22% {
+	transform: rotate(-30deg);	
+  }
+  25% {
+	transform: rotate(-30deg);	
+  }
+  47% {
+	transform: rotate(0deg);	
+  }
+  100% {
+	transform: rotate(0deg);
+  }
+}
+
+@keyframes clawing-bottom {
+  0% {
+	transform: rotate(0deg);
+  }
+  2% {
+	transform: rotate(30deg);
+  }
+  5% {
+	transform: rotate(30deg);
+  }
+  15% {
+	transform: rotate(0deg);
+  }
+  22% {
+	transform: rotate(30deg);	
+  }
+  25% {
+	transform: rotate(30deg);	
+  }
+  47% {
+	transform: rotate(0deg);	
+  }
+  100% {
+	transform: rotate(0deg);
+  }
+}
+
+/*Heart*/
+.heart-wrapper {
+	position: absolute;
+	left: 162.5px;
+	top: 65px;
+	height: 20px;
+	width: 20px;
+}
+
+.heart-wrapper .heart {
+	display: block;
+	height: 15px;
+	width: 15px;
+	top: 54%;
+	margin-top: -5em;
+	margin-left: -5em;
+	left: 50%;
+	position: absolute;
+	z-index: 0;
+}
+
+.heart-wrapper .heart > * {
+	overflow: hidden;
+	position: absolute;
+}
+
+.heart-wrapper .heart > *:after {
+	display: block;
+	content: '';
+	position: absolute;
+	background: #F27173;
+}
+
+.heart-wrapper .heart .tl {
+	height: 25%;
+	width: 50.25%;
+	top: 0;
+	left: 0;
+}
+
+.heart-wrapper .heart .tl:after {
+	top: 0;
+	left: 0;
+	height: 200%;
+	width: 104%;
+	border-top-left-radius: 70% 80%;
+	border-top-right-radius: 80% 80%;
+ 	border-bottom-right-radius: 50% 50%;
+	border-bottom-left-radius: 50% 50%;
+}
+
+.heart-wrapper .heart .tr {
+	height: 25%;
+	width: 50.25%;
+	top: 0;
+	right: 0;
+}
+
+.heart-wrapper .heart .tr:after {
+	top: 0;
+	right: 0;
+	height: 200%;
+	width: 104%;
+	border-top-left-radius: 80% 80%;
+	border-top-right-radius: 70% 80%;
+	border-bottom-right-radius: 50% 50%;
+	border-bottom-left-radius: 50% 50%;
+}
+
+.heart-wrapper .heart .bl {
+	height: 75.5%;
+	width: 50.25%;
+	bottom: 0;
+	left: 0;
+}
+
+.heart-wrapper .heart .bl:after {
+	top: 0;
+	left: 0;
+	height: 95%;
+	width: 160%;
+	border-top-left-radius: 0 0;
+	border-top-right-radius: 0 0;
+	border-bottom-right-radius: 0 0;
+	border-bottom-left-radius: 100% 100%;
+}
+
+.heart-wrapper .heart .br {
+ 	height: 75.5%;
+	width: 50.25%;
+ 	bottom: 0;
+	right: 0;
+}
+
+.heart-wrapper .heart .br:after {
+	top: 0;
+	right: 0;
+	height: 95%;
+	width: 160%;
+	border-top-left-radius: 0 0;
+	border-top-right-radius: 0 0;
+	border-bottom-right-radius: 100% 100%;
+	border-bottom-left-radius: 0 0;
+}
+
+
+
+</style>
+<body>
+<div class="left-panel">
+	<div class="navigation">
+		<div class="crabs">
+			<div class="crab-left">
+				<div class="body">
+					<div class="smile"></div>
+				</div>
+				<div class="eye">
+					<div class="eye-line-left"></div>
+					<div class="eye-line-right"></div>
+					<div class="eye-left">
+					<div class="eye-white blinking">
+						<div class="eye-ball"></div>
+					</div>	
+				</div>	
+				<div class="eye-right">
+					<div class="eye-white blinking">
+						<div class="eye-ball"></div>
+					</div>	
+				</div>
+			</div>
+			<div class="arm-left"></div>
+			<div class="arm-right"></div>
+				<div class="claw-left">
+					<div class="claw-top"></div>
+					<div class="claw-bottom"></div>
+				</div>
+				<div class="claw-right">
+					<div class="claw-top clawing"></div>
+					<div class="claw-bottom"></div>
+				</div>
+				<div class="leg-1"></div>
+				<div class="leg-2"></div>
+				<div class="leg-3"></div>
+				<div class="leg-4"></div>
+			</div>
+			<div class="heart-wrapper">
+				<div class="heart">
+					<div class="tl"></div>
+					<div class="tr"></div>
+					<div class="bl"></div>
+					<div class="br"></div>
+				</div>
+			</div>
+			<div class="crab-right">
+				<div class="body">
+					<div class="smile"></div>
+				</div>
+				<div class="eye">
+					<div class="eye-line-left"></div>
+					<div class="eye-line-right"></div>
+					<div class="eye-left">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>
+					<div class="eye-right">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>
+				</div>
+				<div class="arm-left"></div>
+				<div class="arm-right"></div>
+				<div class="claw-left">
+					<div class="claw-top"></div>
+					<div class="claw-bottom"></div>
+				</div>
+				<div class="claw-right">
+					<div class="claw-top"></div>
+					<div class="claw-bottom"></div>
+				</div>
+				<div class="leg-1"></div>
+				<div class="leg-2"></div>
+				<div class="leg-3"></div>
+				<div class="leg-4"></div>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<p>05-06-2016</p>
+		<h1>Phyllis & John</h1>
+		<p>sea bright, nj</p>
+		<div class="divider"></div>
+
+		<ul>
+			<li><a href="/">rsvp</a></li>
+			<li><a href="/details/">details</a></li>
+			<li><a href="/crew/">crew</a></li>
+			<li class="active"><a href="/photos/">photographs</a></li>
+			<li><a href="/request/">request a song</a></li>
+		</ul>
+	</div>	
+</div>
+		
+	<div class="main">
+		<div class="rsvp">
+			<h1 style="margin-top: 125px; margin-left: 25px;">Come back after the wedding!</h1>
+			<p>WE WILL POST THE PHOTOGRAPHS FROM THE WEDDING RIGHT HERE FOR YOU!</p>
+		</div>
+	</div>
+</body>
+</html>
